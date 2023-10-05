@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Treino</title>
+</head>
+<body>
+    
+    <p id="name" style="display: none;">Rayam</p>
+
+
+    <ul>
+        <li class="item">Arroz</li>
+        <li class="item">Feijão</li>
+        <li class="item">Farinha</li>
+    </ul>
+    <script>
+        
+        
+        let name ='Náthaly'
+        function geraName() {
+          console.log(name);
+        }
+        geraName()
+
+        
+        
+                                                /** ex arrow function **/
+        
+
+        //const getName = (name) => {
+        //    console.log(name);
+        //}
+        //getName('Rayam');
+
+
+        
+                                                /** EVENT LISTENER **/
+
+        
+//        const name = document.getElementById('name');
+//        name.addEventListener('click', changeName);
+//
+//        function changeName() {
+//            console.log('Rayammmm');
+//            name.innerHTML = 'Fonsêca';
+//        }
+                                                /**getElementByClass**/
+
+                                                
+    let items = Array.from(document.getElementsByClassName('item'));
+    console.log(items);
+
+    items.forEach(item =>{
+        item.addEventListener('click', onItemClick);
+    });
+
+    function onItemClick(event) {
+        console.log('Clicou em', event.target.innerHTML);
+    }
+
+    </script>
+</body>
+</html>
