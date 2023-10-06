@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENT LIST</title>
+    <style>
+        #area {
+            width: 200px;
+            height: 200px;
+            background: violet;
+            font-size: 20px;
+            color: blue;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"> 
+        Interaja...
+    </div>
+
+    <!-- onclick="clicou()" onmouseenter="mouseIn()" onmouseout="mouseOut()" --> 
+
+    <script>
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicou)
+        a.addEventListener('mouseenter', mouseIn)
+        a.addEventListener('mouseout', mouseOut)
+        
+        function clicou() { 
+            a.innerHTML = 'Clicou'
+            a.style.background = 'red'
+        }
+
+        function mouseIn() {
+            a.innerHTML = 'Entrou'
+        }
+
+        function mouseOut() {
+            a.innerHTML = 'Saiu'
+            a.style.background = 'violet'
+        }
+
+    </script>
+</body>
+</html>
