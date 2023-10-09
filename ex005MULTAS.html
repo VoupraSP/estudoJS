@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multas</title>
+</head>
+<body>
+    <h1>SISTEMA DE MULTAS</h1>
+    <p>Digite a velocidade:</p>
+    <input type="number" name="txt1" id="txt1">
+    <input type="button" value="Verificar" onclick="check()">
+    <div id="resultado"></div>
+
+    <script>
+        function check() {
+            var numOne = window.document.getElementById('txt1')
+            var n1 = Number(numOne.value)
+            if (n1 > 60) {
+                resultado.innerHTML = `Você está <strong>MULTADO</strong> por excesso de velocidade!`
+            } else {
+                resultado.innerHTML = `<b>${n1}km/h</b> está dentro do limite de velocidade.`
+            }
+            
+        }
+    </script>
+</body>
+</html>
