@@ -1,0 +1,25 @@
+body {
+    background: rgb(105, 105, 255);
+}
+
+header {
+    text-align: center;
+    color: white;
+}
+
+section {
+    width: 500px;
+    background: white;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);
+}
+
+div {
+    padding: 15px;
+}
+
+footer {
+    text-align: center;
+    color: white;
+}
