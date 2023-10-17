@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Item</title>
+    <style>
+        ul {
+            display: flex;
+            width: 300px;
+            margin: 100px auto;
+        }
+
+        ul li {
+            list-style: none;
+            margin: auto;
+            padding: 5px 15px;
+            cursor: pointer;
+            
+        }
+
+        ul li:hover {
+            color: brown;
+        }
+
+        .active {
+            color: blue;
+            border-bottom: 3px dashed blue;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="item active" data="service">Serviços</li>
+        <li class="item" data="about">Sobre</li>
+        <li class="item" data="contact">Contato</li>
+    </ul>
+
+    <script>
+        let items = Array.from(document.getElementsByClassName('item')) //Transforma a coleção em Array
+
+        //adiciona o evento 'click' em todos os objetos da classe 'item'
+        items.forEach(item => {
+            item.addEventListener('click', getName)
+        })
+
+       
+        function getName(event) {
+            let getAtribute = event.target.getAttribute('data')  //atibui 'data' à variável a cada click 
+            
+            items.forEach(item => {
+                let itemAtribute = item.getAttribute('data') //atibui 'data' à  variável de comparação
+
+                if (getAtribute === itemAtribute) {
+                    item.classList.add('active')
+                } else {
+                    item.classList.remove('active')
+                }
+            })
+        }
+        
+    </script>
+</body>
+</html>

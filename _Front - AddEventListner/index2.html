@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="item">batata</li>
+        <li class="item">arroz</li>
+        <li class="item">Feijão</li>
+    </ul>
+
+    <script>
+
+        /*
+        let items = Array.from(window.document.getElementsByClassName('item'))
+       
+        // Percorre cada objeto da classe ITEM e adiciona o evento
+        items.forEach(item =>{
+            item.addEventListener('click', getName)
+        })
+
+        function getName(event) {
+            console.log('Clicou no item', event.target.innerHTML)
+        }
+
+        */
+
+
+       let items = Array.from(window.document.getElementsByClassName('item'))
+
+       items.forEach( item => {
+            item.addEventListener('click', getName) 
+       })
+       
+       function getName(event) {
+            console.log('Clicou em', event.target.innerHTML)
+       }
+
+    </script>
+</body>
+</html>
