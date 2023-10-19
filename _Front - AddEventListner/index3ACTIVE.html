@@ -47,7 +47,7 @@
         const servicetext = document.getElementById('servicetext')
         const abouttext = document.getElementById('abouttext')
         const contacttext = document.getElementById('contacttext')
-
+        hideOrShowText('service')
         
         //adiciona o evento 'click' em todos os objetos da classe 'item'
         items.forEach(item => {
@@ -57,7 +57,11 @@
        
         function getName(event) {
             let getAtribute = event.target.getAttribute('data')  //atibui 'data' à variável a cada click 
-            
+            addOrRemoveActive(getAtribute)
+            hideOrShowText(getAtribute)
+        }
+        
+        function addOrRemoveActive(getAtribute) {
             items.forEach(item => {
                 let itemAtribute = item.getAttribute('data') //atibui 'data' à  variável de comparação
 
@@ -68,10 +72,29 @@
                 }
             })
         }
-        
-        function addOrRemove() {
-            
+
+        function hideText(){ //oculta  os textos
+            servicetext.style.display = 'none'
+            abouttext.style.display = 'none'
+            contacttext.style.display = 'none'
         }
+
+        function hideOrShowText(getAtribute) {
+            hideText()//oculta  os textos a cada click
+        
+            if(getAtribute === 'service'){
+                servicetext.style.display = 'block'
+            }
+            if(getAtribute === 'about'){
+                abouttext.style.display = 'block'
+            }
+            if(getAtribute === 'contact'){
+                contacttext.style.display = 'block'
+            }
+        }
+
+
+        
     </script>
 </body>
 </html>
