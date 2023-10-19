@@ -37,9 +37,18 @@
         <li class="item" data="contact">Contato</li>
     </ul>
 
+    <div id="servicetext">service Text</div>
+    <div id="abouttext">about text</div>
+    <div id="contacttext">contact Text</div>
+
     <script>
         let items = Array.from(document.getElementsByClassName('item')) //Transforma a coleção em Array
 
+        const servicetext = document.getElementById('servicetext')
+        const abouttext = document.getElementById('abouttext')
+        const contacttext = document.getElementById('contacttext')
+
+        
         //adiciona o evento 'click' em todos os objetos da classe 'item'
         items.forEach(item => {
             item.addEventListener('click', getName)
@@ -60,6 +69,9 @@
             })
         }
         
+        function addOrRemove() {
+            
+        }
     </script>
 </body>
 </html>
