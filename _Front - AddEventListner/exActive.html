@@ -51,8 +51,25 @@
         /*inicia a section*/
 
         section {
-            display: flex;
             padding: 10px 120px;
+            color: white;
+            background: rgb(19, 18, 18);
+            width: 100%;
+            height: 100vh;
+            
+        }
+        section .content-container {
+            display: flex;
+        }
+
+        section .content-container .active-container {
+            width: 450px;
+            height: fit-content;
+            background: black;
+        } 
+        .active-container #ul-section-container {
+            margin: 0;
+            padding: 0;
         }
     </style>
 </head>
@@ -68,33 +85,39 @@
             <li>Conhecimentos</li>
         </ul>
     </header>
+
     <section>
         <h1>Experiencias</h1>
-        <div class="active-container">
-            <ul id="section-container">
-                <li>Digital House</li>
-                <li>Zuplae</li>
-                <li>ContWeb</li>
-                <li>Código Fonte TV</li>
-            </ul>
-        </div>
 
-        <div class="text-container">
-            <div id="digitalHouse">
-                <h2>Professor conteudista em Frontend</h2>
-                <h5>Digital House</h5>
-                <p>
-                    Trabalhei como instrutor conteudista em frontend na Digital House, o trabalho consistia em criar conteúdos para as aulas de especialização frontend. Alguns temas dos conteúdos realizados foram: React, Redux, TypeScript, Testes, GraphQL, Next.js, MUI, React Hook Form e styled-components.
-                </p>
+        <div class="content-container">
+            <div class="active-container">
+                <ul id="ul-section-container">
+                    <li>Digital House</li>
+                    <li>Zuplae</li>
+                    <li>ContWeb</li>
+                    <li>Código Fonte TV</li>
+                </ul>
             </div>
-            <div id="zuplae">
-                <h2>Social Media e UI Designer</h2>
-                <h5>Zuplae</h5>
-                <p>
-                    Trabalhei como Social Media e Designer na Zuplae que é um escola de programação, onde teve como foco as criações de conteúdos sobre programação para a comunidade dev através das redes sociais.
-                </p>
+    
+            <div class="text-container">
+                <div id="digitalHouse">
+                    <h2>Professor conteudista em Frontend</h2>
+                    <h5>Digital House</h5>
+                    <p>
+                        Trabalhei como instrutor conteudista em frontend na Digital House, o trabalho consistia em criar conteúdos para as aulas de especialização frontend. Alguns temas dos conteúdos realizados foram: React, Redux, TypeScript, Testes, GraphQL, Next.js, MUI, React Hook Form e styled-components.
+                    </p>
+                </div>
+                <div id="zuplae">
+                    <h2>Social Media e UI Designer</h2>
+                    <h5>Zuplae</h5>
+                    <p>
+                        Trabalhei como Social Media e Designer na Zuplae que é um escola de programação, onde teve como foco as criações de conteúdos sobre programação para a comunidade dev através das redes sociais.
+                    </p>
+                </div>
+
             </div>
         </div>
+        
         
     </section>
 </body>
