@@ -22,34 +22,44 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 100px;
+            padding: 10px 120px;
         }
-        ul {
+        header img {
+            width: 13%;
+        }
+        #header-container {
             padding: 0;
             display: flex;  
             justify-content: space-between;
             color: white;
-            width: 60%;
+            width: 65%;
         }
-        ul li {
+        #header-container li {
             cursor: pointer;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             display: flex;
             color:gray;
             padding-bottom: 3px;
             border-bottom: 2px solid transparent;
             transition: all .6s;
         }
-        ul li:hover {
+        #header-container li:hover {
             color: white;
             border-bottom: 2px solid whitesmoke;
+        }
+
+        /*inicia a section*/
+
+        section {
+            display: flex;
+            padding: 10px 120px;
         }
     </style>
 </head>
 <body>
     <header>
         <img src="https://www.iuricode.com/assets/image/logo-iuricode.svg" alt="Logo">
-        <ul>
+        <ul id="header-container">
             <li>Íncio</li>
             <li>Quem Sou</li>
             <li>Experiências</li>
@@ -58,5 +68,34 @@
             <li>Conhecimentos</li>
         </ul>
     </header>
+    <section>
+        <h1>Experiencias</h1>
+        <div class="active-container">
+            <ul id="section-container">
+                <li>Digital House</li>
+                <li>Zuplae</li>
+                <li>ContWeb</li>
+                <li>Código Fonte TV</li>
+            </ul>
+        </div>
+
+        <div class="text-container">
+            <div id="digitalHouse">
+                <h2>Professor conteudista em Frontend</h2>
+                <h5>Digital House</h5>
+                <p>
+                    Trabalhei como instrutor conteudista em frontend na Digital House, o trabalho consistia em criar conteúdos para as aulas de especialização frontend. Alguns temas dos conteúdos realizados foram: React, Redux, TypeScript, Testes, GraphQL, Next.js, MUI, React Hook Form e styled-components.
+                </p>
+            </div>
+            <div id="zuplae">
+                <h2>Social Media e UI Designer</h2>
+                <h5>Zuplae</h5>
+                <p>
+                    Trabalhei como Social Media e Designer na Zuplae que é um escola de programação, onde teve como foco as criações de conteúdos sobre programação para a comunidade dev através das redes sociais.
+                </p>
+            </div>
+        </div>
+        
+    </section>
 </body>
 </html>
