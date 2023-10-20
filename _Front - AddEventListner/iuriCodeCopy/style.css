@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(19, 18, 18);
+}
+header {
+    background: rgb(10, 10, 10);
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 150px;
+}
+header img {
+    width: 13%;
+}
+#header-container {
+    padding: 0;
+    display: flex;  
+    justify-content: space-between;
+    color: white;
+    width: 65%;
+}
+#header-container li {
+    cursor: pointer;
+    font-size: 1.3rem;
+    display: flex;
+    color:gray;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: all .6s;
+}
+#header-container li:hover {
+    color: white;
+    border-bottom: 2px solid whitesmoke;
+}
+    
+
+    /*inicia a section*/
+
+section {
+    padding: 20px 150px;
+    color: white;
+    width: 100%;
+    height: 100vh; 
+    margin-top: 40px;
+}
+
+.h1-section-container {
+    font-size: 3rem;
+}
+
+section .content-container {
+    display: flex;
+}
+section .content-container .active-container {
+    width: 450px;
+    height: fit-content;
+    background: black;
+} 
+.active-container #ul-section-container {
+    margin: 0;
+    padding: 0;
+    background: rgb(12, 12, 12);
+    cursor: pointer;
+}
+#ul-section-container .item {
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 25px 35px ;
+}
+#ul-section-container .active {
+    border-left: 5px solid violet;
+    color: violet;
+}
