@@ -4,12 +4,17 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --white: white;
     --h2Color: rgb(151, 109, 255);
     --textColor: gray;
     --paddingProject: 20px 200px;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -21,6 +26,7 @@ p {
     font-size: 1.4rem;
     color: var(--textColor);
 }
+
 header {
     background: rgb(10, 10, 10);
     width: 100%;
@@ -29,43 +35,59 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: var(--paddingProject);
+    position: fixed;
+    z-index: 9999;
 }
+
 header img {
     width: 13%;
 }
-#header-container {
+
+#ul-header-container {
     padding: 0;
     display: flex;  
     justify-content: space-between;
     color: var(--white);
     width: 65%;
 }
-#header-container li {
+
+#ul-header-container li {
     cursor: pointer;
     font-size: 1.3rem;
     display: flex;
-    color: var(--textColor);
     padding-bottom: 3px;
     border-bottom: 2px solid transparent;
     transition: all .6s;
 }
-#header-container li:hover {
+
+#ul-header-container li:hover {
     color: var(--white);
     border-bottom: 2px solid whitesmoke;
 }
+
+#ul-header-container li a {
+    color: var(--textColor);
+}
+
     
 
-    /*inicia a section*/
+                            /*inicia a section start*/
 
 
 #start {
     padding: var(--paddingProject);
-    margin-top: 70px;
     display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
 }
 
 #start .start-container {
     width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .h1-start-container {
@@ -78,28 +100,46 @@ header img {
     color: var(--h2Color);
 }
 
-.start-container input[type='button'] {
+.start-container .input-container input[type='button'] {
     padding: 22px 100px;
     margin-top: 35px;
+    border: none;
     border-radius: 5px;
     background: var(--h2Color);
     font-size: 1.2rem;
     font-weight: lighter;
     color: var(--white);
+    cursor: pointer;
+    transition: .4s ease-out;
+}
+
+.start-container .input-container input[type='button']:hover {
+    padding: 22px 110px;
+    transition: .3s ease-in;
 }
 
 #start .svg-container {
+    width: 45%;
+    display: flex;
+    align-items: center;
+}
 
+#start .svg-container svg {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    right: 0;
+    color: var(--h2Color);
 }
 
 
+                                /*inicia a section experience*/
+
 #experience {
-    display: none;
     padding: var(--paddingProject);
     color: var(--white);
     width: 100%;
-    height: 100vh; 
-    margin-top: 40px;
+    height: 750px;
 }
 
 .h1-section-container{
