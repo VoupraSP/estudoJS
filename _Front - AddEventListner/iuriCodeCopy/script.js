@@ -1,5 +1,13 @@
 feather.replace();
 
+let targetInstagram = document.getElementById('instagram')
+
+targetInstagram.addEventListener('click', botao) 
+
+function botao(event) {
+    window.open('https://api.whatsapp.com/send?phone=5575998882146&text=Ol%C3%A1,%20gostaria%20de%20saber%20como%20faz%20um%20site.', '_blank');
+}
+
 let items = Array.from(document.getElementsByClassName('item'))
 let digitalHouse = document.getElementById('digitalHouse')
 let zuplae = document.getElementById('zuplae')
