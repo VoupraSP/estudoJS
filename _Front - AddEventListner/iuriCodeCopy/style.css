@@ -3,11 +3,23 @@
     list-style: none;
     text-decoration: none;
 }
+
+:root {
+    --white: white;
+    --h2Color: rgb(151, 109, 255);
+    --textColor: gray;
+    --paddingProject: 20px 200px;
+}
 body {
     margin: 0;
     padding: 0;
     background: rgb(19, 18, 18);
     font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: 1.4rem;
+    color: var(--textColor);
 }
 header {
     background: rgb(10, 10, 10);
@@ -16,7 +28,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 200px;
+    padding: var(--paddingProject);
 }
 header img {
     width: 13%;
@@ -25,43 +37,80 @@ header img {
     padding: 0;
     display: flex;  
     justify-content: space-between;
-    color: white;
+    color: var(--white);
     width: 65%;
 }
 #header-container li {
     cursor: pointer;
     font-size: 1.3rem;
     display: flex;
-    color:gray;
+    color: var(--textColor);
     padding-bottom: 3px;
     border-bottom: 2px solid transparent;
     transition: all .6s;
 }
 #header-container li:hover {
-    color: white;
+    color: var(--white);
     border-bottom: 2px solid whitesmoke;
 }
     
 
     /*inicia a section*/
 
-section {
-    padding: 20px 200px;
-    color: white;
+
+#start {
+    padding: var(--paddingProject);
+    margin-top: 70px;
+    display: flex;
+}
+
+#start .start-container {
+    width: 55%;
+}
+
+.h1-start-container {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.change-color {
+    color: var(--h2Color);
+}
+
+.start-container input[type='button'] {
+    padding: 22px 100px;
+    margin-top: 35px;
+    border-radius: 5px;
+    background: var(--h2Color);
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: var(--white);
+}
+
+#start .svg-container {
+
+}
+
+
+#experience {
+    display: none;
+    padding: var(--paddingProject);
+    color: var(--white);
     width: 100%;
     height: 100vh; 
     margin-top: 40px;
 }
 
-.h1-section-container {
+.h1-section-container{
     font-size: 3rem;
     margin-bottom: 50px;
 }
 
-section .content-container {
+#experience .content-container {
     display: flex;
 }
-section .content-container .active-container {
+#experience .content-container .active-container {
     min-width: 300px;
     height: fit-content;
     background: black;
@@ -78,8 +127,8 @@ section .content-container .active-container {
     padding: 25px 35px ;
 }
 #ul-section-container .active {
-    border-left: 5px solid rgb(151, 109, 255);
-    color: rgb(151, 109, 255);
+    border-left: 5px solid var(--h2Color);
+    color: var(--h2Color);
 }
 
 .text-container {
@@ -93,10 +142,7 @@ section .content-container .active-container {
 
 .text-container h5 {
     font-size: 1.2rem;
-    color: rgb(151, 109, 255);
+    color: var(--h2Color);
 }
 
-.text-container p {
-    font-size: 1.4rem;
-    color: gray;
-}
+

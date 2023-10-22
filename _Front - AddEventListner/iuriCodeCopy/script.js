@@ -1,3 +1,5 @@
+feather.replace();
+
 let items = Array.from(document.getElementsByClassName('item'))
 let digitalHouse = document.getElementById('digitalHouse')
 let zuplae = document.getElementById('zuplae')
