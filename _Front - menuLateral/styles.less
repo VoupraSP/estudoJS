@@ -1,0 +1,26 @@
+@dark-blue: #31455a;
+@light-blue: #5e6f82;
+@opacity-dark-blue: #5b748f8a;
+@menu-height: 45px;
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: @dark-blue;
+    font-family: sans-serif;
+}
+
+.top-menu {
+    background: #fff;
+    width: 100%;
+    height: @menu-height;
+    display: flex;
+    align-items: center;
+
+    svg {
+        height: 100%;
+        padding: 0 15px;
+        border-right: 1px solid @opacity-dark-blue;
+    }
+}
