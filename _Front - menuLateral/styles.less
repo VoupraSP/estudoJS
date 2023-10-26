@@ -22,5 +22,33 @@ body {
         height: 100%;
         padding: 0 15px;
         border-right: 1px solid @opacity-dark-blue;
+        cursor: pointer;
+    }
+}
+
+.lateral-menu {
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: flex;
+            align-items: center;
+            height: 65px;
+            color: @dark-blue;
+            padding: 0 15px;
+            border-top: 1px solid @opacity-dark-blue;
+            cursor: pointer;
+
+            svg {
+                margin-right: 15px;
+                
+            }
+        }
     }
 }
