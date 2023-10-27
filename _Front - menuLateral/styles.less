@@ -27,14 +27,19 @@ body {
 }
 
 .lateral-menu {
-    width: 250px;
+    width: 0px;
     height: 100vh;
     background: #fff;
+    animation: menu-close 0.5s;
 
     ul {
         margin: 0;
         padding: 0;
         list-style: none;
+
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s, visibility 0.3s;
 
         li {
             display: flex;
@@ -43,6 +48,7 @@ body {
             color: @dark-blue;
             padding: 0 15px;
             border-top: 1px solid @opacity-dark-blue;
+            white-space: nowrap;
             cursor: pointer;
 
             svg {
@@ -51,4 +57,31 @@ body {
             }
         }
     }
+
+    &.active {
+        width: 250px;
+        animation: menu-open 0.5s;
+        
+        ul {
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+    }
+}
+
+@keyframes menu-open {
+    from {
+        width: 0;
+    } to {
+        width: 250px;  
+    }    
+}
+
+@keyframes menu-close {
+    from {
+        width: 250px;
+    } to {
+        width: 0px;  
+    }    
 }
